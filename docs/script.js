@@ -87,7 +87,7 @@ function getRemainingTime(target, parts, first=true){
 
 // function myFunctions1(m) {
 //   m.classList.toggle("change");
-
+//countdown
 //   let bar = document.getElementById("baricon");
 //   if (bar.className === 'tapbar') {
 //     bar.className += ' tapbar-active'
