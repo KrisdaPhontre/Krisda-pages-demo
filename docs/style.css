@@ -64,7 +64,7 @@ body {
   transition: 1.3s;
 }
 .menu {
-  position: fixed;
+
   width: 250px;
   height: 500px;
   margin: 10px;
@@ -84,6 +84,7 @@ body {
 } */
 
 .logo {
+  position: fixed;
   width: 100%;
   height: 100px;
   background-image: url('./edgy_kirihime_yoruka_wallpaper_hd_by_noarin00_dbtzfm0-fullview.png');
