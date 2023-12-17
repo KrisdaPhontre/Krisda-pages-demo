@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-size: 1980px 1080px;
+  background-position-x: center;
+  object-fit: cover;
+}
+
   .overlay {
   height: 100%;
   width: 0;
@@ -72,9 +78,10 @@
   right: 0;
   z-index: 20;
 }
-.logo h1 {
+
+/* .logo h1 {
   font-size: 50px;
-}
+} */
 
 .logo {
   width: 100%;
