@@ -64,6 +64,7 @@ body {
   transition: 1.3s;
 }
 .menu {
+  position: fixed;
   width: 250px;
   height: 500px;
   margin: 10px;
