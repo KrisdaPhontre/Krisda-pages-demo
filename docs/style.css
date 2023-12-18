@@ -266,7 +266,7 @@ ul:hover {
   font-size: 25px;
 }
 
-/* .countdown{
+.countdown{
   --number-color: hsl(0 0% 100%);
   --text-color: hsl(0 0% 25%);
   --dot-color: hsl(0 0% 10%);
@@ -278,7 +278,7 @@ ul:hover {
   bottom: 0; right: 0;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  width: min(60rem, 100%);
+  /* width: min(60rem, 100%); */
   margin-inline: auto;
   background-color: rgba(17, 110, 231, 0.5);
   border-radius: 20px;
@@ -324,5 +324,4 @@ ul:hover {
       }
     }
   }
-} */
-
+}
