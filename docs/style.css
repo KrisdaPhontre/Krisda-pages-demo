@@ -1,345 +1,269 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
 }
-
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior: smooth;
 }
-
-body {
-  background-size: auto;
-  background-position-x: center;
-  object-fit: cover;
-  width: 100%; height: 100%;
-}
-
-  .overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0; top: 0;
-  background-color: rgb(0,0,0); background-color: rgba(0,0,0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-  .overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  }
-
-  .overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  }
-
-  .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-  font-size: 50px;
-  }
-
-  .overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  }
-
-  @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    }
-  }
-
-.menu-active {
-  display: block !important;
-  transition: 1.3s;
-}
-.menu {
-  width: 250px;
-  height: 500px;
-  margin: 10px;
-  margin-top: 110px;
-  position: fixed;
-  background-image: url("https://images.wallpaperscraft.com/image/single/girl_anime_art_1122488_800x1280.jpg");
-  background-size: 400px 640px;
-  background-position: center;
-  border: #000 5px solid;
-  border-radius: 40px;
-  display: none;
-  justify-content: center;
-  right: 0;
-}
-
-/* .logo h1 {
-  font-size: 50px;
-} */
-
-.logo {
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  background-image: url('./edgy_kirihime_yoruka_wallpaper_hd_by_noarin00_dbtzfm0-fullview.png');
-  background-position-x: center;
-  background-position-y: -90px;
-  color: #f1f1f1;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid black;
-}
-.content {
-  position: fixed;
-  top: 10px;
-  right: 0;
-  margin: 17px;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #f1f1f1;
-  margin: 6px 0;
-  transition: 0.4s;
-  border-radius: 10px;
-}
-
-.change .bar1 {
-  transform:translate(0, 11px) rotate(-45deg);
-}
-.change .bar2 {
-  opacity: 0;
-}
-.change .bar3 {
-  transform:translate(0, -11px) rotate(45deg);
-}
-
-.text1{
-  position: relative;
-  background-color: #5FBDFF;
-  width: 400px;
-  height: 100px;
-  border: 5px solid #000;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-.P1 p {
-  margin: 10px;
-}
-
-.P1 {
-  position: fixed;
-  bottom: auto;
-  margin: 10px;
-  width: 220px;
-  height:220px;
-  background-color: rgba(255, 255, 255, 0.459);
-  border-radius: 20px;
-}
-
-/* .P2-active {
-  margin: 25px auto;
-} */
-
-.P2:hover {
-  background-color: rgba(190, 190, 190, 0.9);
-}
-.P2 {
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  width: 100px;
-  height: 7px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-}
-
-.h2 h2 {
-  width: 150px;
-  margin: 10px;
-  color: #f1f1f1;
-  background-color: rgba(0,0,0, 0.5);
-  border-radius: 20px;
-}
-
-.h2 h2 i {
-  font-size: 20px;
-  color: rgb(247, 29, 29);
-  margin-left: 10px;
-}
-
-ul {
-  margin: 10px;
-  transition: 0.3s;
-}
-
-ul:hover {
-  color: #f1f1f1;
-  font-size: 35px;
-  transition: 0.3s;
-}
-
-.tapbar i {
-  width: auto;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  margin: 25px;
-  font-size: 20px;
-}
-
-.tapbar-active {
-  display: block !important;
-}
-
-.tapbar i:hover{
-  color: #f1f1f1;
-}
-#baricon {
-  position: fixed;
-}
-.tapbar {
-  position: fixed;
-  bottom: auto;
-  margin: 10px;
-  display: none;
-  background-color: rgb(116, 116, 116);
-  width: 100px;
-  height: 250px;
-  font-size: 20px;
-  border-radius: 40px;
-}
-
-.flex {
-  position: fixed;
-  width: 140px;
-  height: 140px;
-  border: 20px solid rgb(0, 155, 207);
-  border-top: 20px solid hsl(182, 100%, 66%);
-  border-radius: 360px;
-  animation: spin 1s infinite linear;
-}
-
-@keyframes spin {
-  100%{
-    transform: rotate(360deg);
-  }
-}
-
-#Profile {
-  display: flex;
-  justify-content: center;
-}
-
-#Profile img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-  width: 120px;
-  height: 120px;
-  border-radius: 150px;
-}
-
-#Profile span {
-  position: absolute;
-  bottom: -70px;
-  display: block;
-  width: 150px;
-  text-align: center;
-  font-family: 'Oswald';
-  color: #fff;
-  font-size: 25px;
-}
-
-@media (max-width: 400px){
-  .text1{
-    background-color: #5FBDFF;
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding-left: 20px;
+    padding-right: 50px;
     width: 100%;
-    border-radius: 0;
-    height: 100px;
-  }
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    z-index: 999;
 }
-.countdown{
-  --number-color: hsl(0 0% 100%);
-  --text-color: hsl(0 0% 25%);
-  --dot-color: hsl(0 0% 10%);
-  --dot-color-remaining: hsl(182, 100%, 66%);
-  --dot-color-active: hsl(0 100% 50%);
-  font-family: system-ui, sans-serif;
-  display: grid;
-  position: absolute;
-  bottom: 0; right: 0;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  /* width: min(60rem, 100%); */
-  margin-inline: auto;
-  background-color: rgba(17, 110, 231, 0.5);
-  border-radius: 20px;
-  container: inline-size;
-  > .part {
-    aspect-ratio: 1/1;
-    margin: 5px;
+header i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.menubar a{
+    font-size: 1.2rem;
+    padding-left: 10px;
+    color: #ffffff;
+}
+.menubar a:hover{
+    text-shadow: 0 0 1rem #09ff00;
+}
+header .fa-bars:hover{
+    text-shadow: 0 0 1rem #09ff00;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/img/1657753132479.jpg");
+    background-size: contain;
+    background-position: center;
+}
+.maintext{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -5px;
+    text-shadow: 0 0 2rem rgb(0, 0, 0);
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: #000000; 
+    color: #ffffff;
+    cursor: default;
+}
+.menuside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -400px;
+    position: fixed;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 1rem #000000;
+    transition: .5s;
+    z-index: 9999;
+}
+.opnemenubar{
+    left: 0px;
+}
+.menuside .fa-xmark{
+    position: relative;
+    left: 170px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+.menuside .fa-xmark:hover{
+    text-shadow: 0 0 1rem #ff0000;
+}
+.sidetext{
+    font-size: 0.7rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    cursor: default;
+}
+.profileimg{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+.profileimg img{
+    width: 50%;
+    border-radius: 100%;
+}
+.sideicon{
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+}
+.sideicon i{
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #ffffff;
+    transition: .3s;
+}
+.sideicon i:hover{
+    color: #bdbdbd;
+}
+
+
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./img/6063741-grass-field-soccer-ball.jpg");
+    background-size: cover;
+}
+.boxaboutme{
     display: grid;
-    place-items: center;
-    > .remaining {
-      grid-area: 1/1;
-      color: hsl(0 0% 100%);
-      display: grid;
-      text-align: center;
-      font-size: 4cqi;
-      >.number {
-        color: var(--number-color);
-      }
-      >.text {
-        color: var(--text-color);
-        text-transform: uppercase;
-        font-size: 0.5em;
-
-      }
-    }
-    > .dot-container {
-      grid-area: 1/1;
-      height: 100%;
-      width: 4%;
-      rotate: calc(360deg / var(--dots) * var(--dot-idx));
-      > .dot {
-        /* width: 100%; */
-        aspect-ratio: 1/1;
-        background-color: var(--dot-color);
-        border-radius: 50%;
-        transition: background-color .25s;
-        &[data-active=true]{
-          background-color: var(--dot-color-remaining);
-          &[data-lastactive=true]{
-            background-color: var(--dot-color-active);
-          }
-        }
-      }
-    }
-  }
+    grid-template-columns: repeat(2,1fr);
+    width: 940px;
+    height: 500px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
+.boxaboutme h1{
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 1rem #000000;
+}
+.boxaboutme h2{
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 1rem #000000;
+}
+.boxaboutme p{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.imgabout{
+    width: 100%;
+    border-radius: 100%;
+    box-shadow: 40px -10px 3rem #00ff2a;
+    overflow: hidden;
+}
+.imgabout img{
+    width: 100%;
+}
+
+
+.photo{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    padding: 40px 70px;
+}
+.imgme{
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: .4s;
+}
+.imgme img{
+    width: 100%;
+}
+.imgme:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+    background-image: url(/img/6063741-grass-field-soccer-ball.jpg);
+    background-size: cover;
+}
+.skill h1{
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: #ffffff;
+    text-shadow:  0 0 1.5rem #000000;
+}
+.fa-circle-play{
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: #ffffff;
+    cursor: pointer;
+}
+.fa-circle-play:hover{
+    text-shadow: 0 0 1rem #09ff00;
+}
+.video-player{
+    display: none;
+    position: absolute;
+    top: 52.5%;
+    left: 52.9%;
+    transform: translate(-50%,-50%);
+}
+video:focus{
+    outline: none;
+}
+.stopvideo{
+    position: absolute;
+    font-size: 2rem;
+    top: 2.5%;
+    right: 20%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    cursor: pointer;
+}
+.stopvideo:hover{
+    text-shadow: 0 0 1rem #ff0000;
+}
+
+
+footer{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    cursor: default;
+}
+
+::-webkit-scrollbar{
+    width: 9px;
+ }
+ ::-webkit-scrollbar-track{
+    background-color: #fff;
+ }
+ ::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0,0.9);
+    border-radius: 5px;
+ }
