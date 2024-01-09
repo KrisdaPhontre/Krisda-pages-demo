@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIRAYUT SIRIWAT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <i class="fa-solid fa-bars" id="opne"></i>
+        <div class="menubar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#photo">Photo</a>
+            <a href="#skill">Skill</a>
+        </div>
+    </header>
+
+    <main id="home">
+        <div class="maintext">
+            <h1>JIRAYUT SIRIWAT</h1>
+        </div>
+        <div class="menuside">
+            <span><i class="fa-solid fa-xmark" id="close"></i></span>
+            <div class="profileimg">
+                <img src="img/ball.jpeg" alt="">
+            </div>
+            <div class="sidetext">
+                <h1>JIRAYUT SIRIWAT</h1>
+            </div>
+            <div class="sideicon">
+                <span>
+                    <a href="https://www.facebook.com/profile.php?id=100026665425632&mibextid=2JQ9oc" target="_blank">
+                        <i class="fa-brands fa-facebook">
+                            <span>Facebook</span>
+                        </i>
+                    </a>
+                </span>
+                <span>
+                    <a href="https://github.com/jirayut024" target="_blank">
+                        <i class="fa-brands fa-github">
+                            <span>Github</span>
+                        </i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <div class="about" id="about">
+        <div class="boxaboutme">
+            <div class="textabout">
+                <h1>About Me</h1>
+                <h2>Name</h2>
+                <p>Jirayut Siriwat</p>
+                <h2>NickName</h2>
+                <p>Ball</p>
+                <h2>Age</h2>
+                <p>19</p>
+            </div>
+            <div class="imgabout">
+                <img src="img/1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="photo" id="photo">
+        <div class="imgme">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="imgme">
+            <img src="img/2.jpg" alt="">
+        </div>
+        <div class="imgme">
+            <img src="img/3.jpg" alt="">
+        </div>
+        <div class="imgme">
+            <img src="img/4.jpg" alt="">
+        </div>
+        <div class="imgme">
+            <img src="img/5.jpg" alt="">
+        </div>
+        <div class="imgme">
+            <img src="img/6.jpg" alt="">
+        </div>
+        <div class="imgme">
+            <img src="img/7.jpg" alt="">
+        </div>
+        <div class="imgme">
+            <img src="img/8.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="skill" id="skill">
+        <h1>How to Video Skill</h1>
+        <div class="boxskill">
+            <img src="img/Video.png" alt="">
+            <i class="fa-regular fa-circle-play" onclick="playvideo('mp4/Video.mp4')"></i>
+        </div>
+        <div class="video-player" id="videoplayer">
+            <video width="80%" controls id="video">
+                <source src="mp4/Video.mp4" type="video/mp4">
+            </video>
+            <i class="fa-solid fa-xmark stopvideo" onclick="stopvideo()"></i>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>@Copyright 2023-2024 by Jirayut Siriwat</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
